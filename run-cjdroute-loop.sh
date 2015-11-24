@@ -18,7 +18,7 @@ do
 		echo "nope"
 	fi
 done
-if [[ ! -w "$log_dir" ]] ; then 
+if [[ ! -w "$log_dir" ]] ; then
 	echo "${progname} Could not guess the location of writtable log directory. Will not log." 
 	log_file='/dev/null/'
 else
@@ -26,7 +26,7 @@ else
 fi
 
 
-for f in "$HOME/cjdroute.conf" "$HOME/cjdns/cjdroute.conf" "/etc/cjdroute.conf" "$HOME/work/cjdns/cjdroute.conf"  "$HOME/wrk/cjdns/cjdroute.conf" 
+for f in "$HOME/cjdroute.conf" "$HOME/cjdns/cjdroute.conf" "/etc/cjdroute.conf" "$HOME/work/cjdns/cjdroute.conf"  "$HOME/wrk/cjdns/cjdroute.conf"
 do
 	echo -n "${progname} Looking for config file in typical location ($f)... "
 	if [[ -r "$f" ]] ; then
@@ -38,7 +38,7 @@ do
 	fi
 done
 if [[ ! -r "$conf_file" ]] ; then 
-	echo "${progname} Could not guess the location of cjdns configuration file. Did you created it yet? Maybe move it to standard location like ~/cjdroute.conf" 
+	echo "${progname} Could not guess the location of cjdns configuration file. Did you created it yet? Maybe move it to standard location like ~/cjdroute.conf"
 	exit 1
 fi
 
