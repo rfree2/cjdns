@@ -19,7 +19,7 @@ do
 	fi
 done
 if [[ ! -w "$log_dir" ]] ; then
-	echo "${progname} Could not guess the location of writtable log directory. Will not log." 
+	echo "${progname} Could not guess the location of writtable log directory. Will not log."
 	log_file='/dev/null/'
 else
 	log_file="${log_dir}cjdroute-run.log"
